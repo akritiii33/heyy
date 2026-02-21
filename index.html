@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For aalluu💖</title>
+  <style>
+    body { background: linear-gradient(to right, #ff9a9e, #fad0c4); font-family: Arial; text-align: center; padding-top: 100px; color: white; }
+    .card { background: rgba(255, 255, 255, 0.2); padding: 30px; border-radius: 20px; width: 300px; margin: auto; backdrop-filter: blur(10px); }
+    button { margin-top: 20px; padding: 10px 20px; border: none; border-radius: 20px; background-color: white; color: #ff6b81; font-weight: bold; cursor: pointer; }
+    input { padding: 8px; border-radius: 10px; border: none; margin-top: 10px; }
+  </style>
+</head>
+<body>
 
+<div class="card" id="passwordScreen">
+  <h2>Enter the password 🔐</h2>
+  <input type="password" id="passwordInput" placeholder="Secret word">
+  <br>
+  <button onclick="checkPassword()">Unlock 😋 </button>
+</div>
+
+<div class="card" id="loveContent" style="display:none;">
+  <h2 id="message"> horr kiddaa?? </h2>
+  <button onclick="nextMessage()">Next 💌</button>
+</div>
+
+<script>
+  function checkPassword() {
+    const password = document.getElementById("passwordInput").value;
+    if (password === "northern light") { 
+      document.getElementById("passwordScreen").style.display = "none";
+      document.getElementById("loveContent").style.display = "block";
+    } else {
+      alert("Wrong password 😝 try again!");
+    }
+  }
+
+  let step = 0;
+  function nextMessage() {
+    const messages = ["❤️"," i am grateful to you forr..."," all those memories 🥺","You're really a good person and great soul💖","Now smileee 😄✨"];
+    if(step < messages.length){
+      document.getElementById("message").innerText = messages[step];
+      step++;
+    } else {
+      document.querySelector("#loveContent button").style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
